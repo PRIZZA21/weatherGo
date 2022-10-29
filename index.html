@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>My To-DoList</title>
+  <link rel="icon" href="images/icon2.png" />
+  <!--Bootsrap Css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <!--Bootsrap Js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/1e6b0e0b96.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-expand-md navbar-dark" id="Navigation-bar">
+    <a class="navbar-brand" href="#">WeatherGo</a>
+    <!-- <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link navigation-links" href="#takeWork"
+              ><i class="fa-solid fa-plus"></i> Add Task</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navigation-links" href="#search-box"
+              ><i class="fa-solid fa-magnifying-glass"></i> Search</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navigation-links" href="#download"
+              ><i class="fa-solid fa-circle-info"></i> Help</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navigation-links" href="#"
+              ><i class="fa-solid fa-user"></i> Sign in</a
+            >
+          </li>
+        </ul>
+      </div> -->
+  </nav>
+
+  <!--Home-->
+  <section id="home">
+    <div class="container-fluid Welcome-msg">
+
+      <h3 class="h3">Get Weather at your location</h3>
+    </div>
+    <div class="card">
+      <div class="search">
+        <input type="text" class="search-bar" placeholder="Search">
+        <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+            </path>
+          </svg></button>
+      </div>
+      <div class="weather loading">
+        <h2 class="city">Weather in Denver</h2>
+        <h1 class="temp">51°C</h1>
+        <div class="flex">
+          <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+          <div class="description">Cloudy</div>
+        </div>
+        <div class="humidity">Humidity: 60%</div>
+        <div class="wind">Wind speed: 6.2 km/h</div>
+      </div>
+    </div>
+  </section>
+
+  <!--Services-->
+  <section id="services">
+    <div class="container-fluid services-container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 card-holders">
+          <div class="card my-cards">
+            <img src="images/DailyWeather.jpg" class="card-img-top" alt="" />
+            <div class="card-body">
+              <p class="card-text">Daily</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 card-holders">
+          <div class="card my-cards">
+            <img src="images/weekly.jpg" class="card-img-top" alt="" />
+            <div class="card-body">
+              <p class="card-text">Weekly</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 card-holders">
+          <div class="card my-cards">
+            <img src="images/3.avif" class="card-img-top" alt="" />
+            <div class="card-body">
+              <p class="card-text">Yearly</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-lg-3 col-md-6 card-holders">
+            <div class="card my-cards">
+              <img src="images/4.jpeg" class="card-img-top" alt="" />
+              <div class="card-body">
+                <p class="card-text">Writing</p>
+              </div>
+            </div>
+          </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!--WorkList Section-->
+
+
+  <footer id="footer">
+    <div class="container-fluid">
+
+      <a class="footer-links" href="https://www.facebook.com/profile.php?id=100076001475322">
+        <i class="fa-brands fa-facebook-f tags-foot"></i>
+      </a>
+      <a class="footer-links" href="https://www.instagram.com/priyan.sh.u/">
+        <i class="fa-brands fa-instagram tags-foot"></i>
+      </a>
+      <a class="footer-links" href="mailto:priyanshujayant3121@gmail.com">
+        <i class="fa-solid fa-envelope tags-foot"></i>
+      </a>
+      <p class="footer-para">© Copyright WeatherGo</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
